@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^albums/([0-9]*)$ index.php?album_page=$1
+RewriteRule ^albums/([0-9]*)/$ index.php?album_page=$1
+
+RewriteRule ^edit/([0-9]*)$ album.php?album_id=$1
+RewriteRule ^edit/([0-9]*)/$ album.php?album_id=$1

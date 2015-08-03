@@ -1,0 +1,171 @@
+#album-select,#album-edit {
+
+    .custom-thumb {
+
+        padding: 5px;
+        cursor: pointer;
+        transition: all .3s cubic-bezier(.55,0,.1,1);
+
+        width: 100%;
+        height: 170px;
+        background-size: cover;
+        margin-bottom: 30px;
+    
+        &.album-thumb {
+            border: solid black thin;
+            box-shadow: 
+                1px 1px   0 rgba(0,   0,   0,   0.5), 
+                3px 3px   0 #4E5D6C, 
+                4px 4px   0 rgba(0,   0,   0,   0.5), 
+                6px 6px   0 #4E5D6C,  
+                7px 7px   0 rgba(0,   0,   0,   0.5), 
+                9px 9px   0 #4E5D6C,  
+                10px 10px 0 rgba(0,   0,   0,   0.5);
+
+        }
+
+        &.photo-thumb {
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+
+            &:hover {
+                box-shadow: 0 5px 7px 2px rgba(0, 0, 0, 0.4);
+            }
+
+        }
+
+        .thumb-marker {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            padding-top: 5px;
+            position: absolute;
+            text-align: center;
+            box-shadow: 0 5px 7px 2px rgba(0, 0, 0, 0.4);
+            right: -10px;
+            bottom: -10px;
+            opacity: 0;
+            transition: all .3s cubic-bezier(.55,0,.1,1);
+        }
+
+        &.thumb-selected {
+            -moz-transform:     scale(.9);
+            -webkit-transform:  scale(.9);
+            transform:          scale(.9);
+            .thumb-marker {
+                opacity: 1;
+            }
+        }
+
+        span {
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0.47) 76%, rgba(0,0,0,0.65) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(15%,rgba(0,0,0,0)), color-stop(76%,rgba(0,0,0,0.47)), color-stop(100%,rgba(0,0,0,0.65)));
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 15%,rgba(0,0,0,0.47) 76%,rgba(0,0,0,0.65) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 15%,rgba(0,0,0,0.47) 76%,rgba(0,0,0,0.65) 100%);
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 15%,rgba(0,0,0,0.47) 76%,rgba(0,0,0,0.65) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 15%,rgba(0,0,0,0.47) 76%,rgba(0,0,0,0.65) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+            position: absolute;
+            bottom: 30px;
+            left: 15px;
+            width: calc(100%-15px);
+            padding: 5px;
+            padding-top: 60px;
+
+        }
+
+    }
+
+    #pagination {
+        #pagination-text {
+            margin-top: 10px;
+        }
+    }
+
+}
+
+#setup-icon {
+    font-size: 6em;
+    margin-top: 30px;
+    opacity: 0.3;
+}
+
+#progress-status {
+    opacity:0.3;
+    margin-top: 10px;
+}
+
+#progress {
+    margin-top:30px;
+    margin-bottom: 15px;
+}
+
+#album-edit {
+
+    #tag-editor {
+        .btn-group {
+            margin-bottom: 5px;
+        }
+        #tags-overlay {
+            //background: rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+            height: 80px;
+        }
+
+        #tags {
+            min-height: 80px;
+            margin-bottom: 15px;
+            .tag {
+                margin-bottom: 5px;
+                padding-right: 5px;
+                &.btn-default {
+                    background: #2A323A;
+                }   
+                
+                .tag-remove {
+                    display: inline-block;
+                    margin: 0;
+                    height: 13px;
+                    overflow: hidden;
+                    width: 0px;
+                    transition: all .3s cubic-bezier(.55,0,.1,1);
+                }
+
+                &:hover {
+                    .tag-remove {
+                        width: 20px;
+                   }
+
+                }
+
+            }
+
+
+            
+        } 
+    }
+
+}
+
+.form-group.has-error input {
+    border: solid #D9534F 2px;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
